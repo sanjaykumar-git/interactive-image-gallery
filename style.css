@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('pictures/viewback2.webp');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('pictures/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.main-image {
+  position: relative;
+  margin-bottom: 20px;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.main-image img.show {
+  opacity: 1;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+.thumbnail.active {
+  border-color: #333;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#fullscreenBtn,
+#slideshowBtn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+#fullscreenBtn:hover,
+#slideshowBtn:hover {
+  background-color: #555;
+}
+
+#slideshowBtn {
+  background-color: #007BFF;
+}
+
+#slideshowBtn:hover {
+  background-color: #0056b3;
+}
+
+.thumbnail-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.thumbnail {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  scroll-snap-align: center;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  border-color: #333;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}

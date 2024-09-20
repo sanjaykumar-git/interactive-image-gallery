@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="main-image" onclick="nextImage(event)">
+            <img id="displayedImage" src="pictures/virat-kohli_i1.webp" alt="Main Display" class="show">
+            <div class="prev" onclick="prevImage(event)">&#10094;</div>
+            <div class="next" onclick="nextImage(event)">&#10095;</div>
+        </div>
+        <div class="thumbnail-container">
+            <img class="thumbnail active" src="pictures/virat-kohli_i1.webp" alt="Thumbnail 1" onclick="changeImage(0)">
+            <img class="thumbnail" src="pictures/rohit_i2.webp" alt="Thumbnail 2" onclick="changeImage(1)">
+            <img class="thumbnail" src="pictures/image_3.jpeg" alt="Thumbnail 3" onclick="changeImage(2)">
+            <img class="thumbnail" src="pictures/image_4.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
+            <img class="thumbnail" src="pictures/image_5.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
+            <img class="thumbnail" src="pictures/image_6.jpeg" alt="Thumbnail 6" onclick="changeImage(5)">
+            <img class="thumbnail" src="pictures/image_7.png" alt="Thumbnail 7" onclick="changeImage(6)">
+        </div>
+        <div class="control-buttons">
+            <button id="fullscreenBtn" onclick="toggleFullscreen()">Fullscreen</button>
+            <button id="slideshowBtn" onclick="toggleSlideshow()">Start Slideshow</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
